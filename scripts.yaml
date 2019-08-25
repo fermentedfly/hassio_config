@@ -1,0 +1,8 @@
+wake_up:
+  sequence:
+    - service: light.turn_on
+      data: 
+        entity_id: light.bed_led_strip
+        color_name: white
+        brightness: 255
+        transition: 30

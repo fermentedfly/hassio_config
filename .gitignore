@@ -1,0 +1,9 @@
+.storage
+.cloud
+
+*.log
+*.db
+.HA_VERSION
+
+secrets.yaml
+
