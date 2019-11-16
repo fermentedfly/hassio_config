@@ -19,5 +19,12 @@ input_boolean: !include input/boolean.yaml
 
 sensor: !include sensor.yaml
 
+switch: !include switch.yaml
+
+light: !include light.yaml
+
+mqtt: !include mqtt.yaml
+
 homeassistant:
   customize: !include customize.yaml
+  

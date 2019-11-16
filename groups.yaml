@@ -6,3 +6,9 @@ alarm_clock:
     - input_number.alarm_clock_hour
     - input_number.alarm_clock_minute
     - input_boolean.alarm_clock_status
+
+sous_vide:
+  name: 'Sous Vide Cooker'
+  entities:
+    - fan.circulation_pump
+    - sensor.sensor_0
