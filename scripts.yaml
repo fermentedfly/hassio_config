@@ -5,4 +5,4 @@ wake_up:
         entity_id: light.bed_led_strip
         color_name: white
         brightness: 255
-        transition: 30
+        transition: 1200
