@@ -1,5 +1,6 @@
 .storage
 .cloud
+.idea
 
 *.log
 *.db
