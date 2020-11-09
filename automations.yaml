@@ -8,3 +8,13 @@
     state: 'on'
   action:
     service: script.wake_up
+- alias: 'Bed Light Trigger'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: 'bed_light'
+  action:
+    - service: light.toggle
+      data:
+        entity_id: light.bed_led_strip

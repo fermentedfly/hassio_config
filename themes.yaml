@@ -73,7 +73,7 @@ clear-dark:
   hacs-status-pending-restart: 'var(--text-dark-color)'                           # Restart Icon
   hacs-status-pending-update: 'var(--accent-color)'                               # Update Icon
 
-dark-green:
+dark:
   # Accent Colour (Edit this to change the accent) #
   accent: "#098f0f"
 
