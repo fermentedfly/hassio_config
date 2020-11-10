@@ -8,6 +8,7 @@
     state: 'on'
   action:
     service: script.wake_up
+
 - alias: 'Bed Light Trigger'
   trigger:
     platform: event
@@ -18,3 +19,15 @@
     - service: light.toggle
       data:
         entity_id: light.bed_led_strip
+
+- alias: 'Volumio Play Pause'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      unique_id: '00:12:4b:00:1c:d6:0d:9d'
+  action:
+    - service: media_player.media_play_pause
+      data:
+        entity_id: media_player.volumio
+
