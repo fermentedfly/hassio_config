@@ -14,7 +14,7 @@
     platform: event
     event_type: deconz_event
     event_data:
-      id: 'bed_light'
+      unique_id: '00:12:4b:00:1c:d6:0e:fb'
   action:
     - service: light.toggle
       data:
