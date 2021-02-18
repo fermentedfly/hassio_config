@@ -1,0 +1,59 @@
+- alias: 'Volumio Play Pause'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      unique_id: 'bc:33:ac:ff:fe:ba:a0:26'
+      event: 1002
+  action:
+    - service: media_player.media_play_pause
+      data:
+        entity_id: media_player.volumio
+
+- alias: 'Volumio Next Track'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      unique_id: 'bc:33:ac:ff:fe:ba:a0:26'
+      event: 5002
+  action:
+    - service: media_player.media_next_track
+      data:
+        entity_id: media_player.volumio
+
+- alias: 'Volumio Previous Track'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      unique_id: 'bc:33:ac:ff:fe:ba:a0:26'
+      event: 4002
+  action:
+    - service: media_player.media_previous_track
+      data:
+        entity_id: media_player.volumio
+
+- alias: 'Volumio Volume Up'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      unique_id: 'bc:33:ac:ff:fe:ba:a0:26'
+      event: 2002
+  action:
+    - service: media_player.volume_up
+      data:
+        entity_id: media_player.volumio
+
+- alias: 'Volumio Volume Down'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      unique_id: 'bc:33:ac:ff:fe:ba:a0:26'
+      event: 3002
+  action:
+    - service: media_player.volume_down
+      data:
+        entity_id: media_player.volumio

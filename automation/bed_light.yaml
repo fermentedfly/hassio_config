@@ -1,0 +1,54 @@
+- alias: 'Bed Light Trigger'
+  trigger:
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        unique_id: '00:12:4b:00:1c:d6:0e:fb'
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        unique_id: '00:17:88:01:04:ef:f5:0c'
+        event: 1000
+
+  action:
+    - service: light.toggle
+      data:
+        entity_id: light.bed_led_strip
+
+- alias: 'Bed Light Raise Brightness'
+  trigger:
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        unique_id: '00:17:88:01:04:ef:f5:0c'
+        event: 2000
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        unique_id: '00:17:88:01:04:ef:f5:0c'
+        event: 2001
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.bed_led_strip
+      data_template:
+        brightness: '{{states.light.bed_led_strip.attributes.brightness + 20}}'
+
+- alias: 'Bed Light Lower Brightness'
+  trigger:
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        unique_id: '00:17:88:01:04:ef:f5:0c'
+        event: 3000
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        unique_id: '00:17:88:01:04:ef:f5:0c'
+        event: 3001
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.bed_led_strip
+      data_template:
+        brightness: '{{states.light.bed_led_strip.attributes.brightness - 20}}'
