@@ -1,7 +1,7 @@
 - alias: 'RGB Alarm Clock'
   trigger:
-    platform: template
-    value_template: '{{ states.sensor.time.state == states.sensor.alarm_clock_time_long.state }}'
+    platform: time
+    at: input_datetime.alarm_clock
   condition:
     condition: state
     entity_id: input_boolean.alarm_clock_status

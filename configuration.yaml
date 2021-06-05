@@ -11,8 +11,8 @@ http:
   trusted_proxies: 3.125.2.80
 image:
 input_boolean: !include input/boolean.yaml
-input_datetime:
-input_number: !include input/number.yaml
+input_datetime: !include input/datetime.yaml
+input_number:
 input_select:
 input_text:
 light: !include light.yaml
